@@ -6,22 +6,22 @@ This script produces a clean and tidy data set which shows the means (calculated
 
 The original data set consists of:
 
->'train/X_train.txt': Training set.
->'train/y_train.txt': Training [class] labels.
->'test/X_test.txt': Test set.
->'test/y_test.txt': Test [class] labels.
->'activity_labels.txt': Links the class labels with their activity name.
->'train/subject_train.txt': Identifies the subject who performed the activity. Its range is from 1 to 30. [Also 'test/subject_test.txt']
->'features.txt': List of all features [variables calculated from raw measurements].
+>'train/X_train.txt': Training set. <br>
+>'train/y_train.txt': Training [class] labels.<br>
+>'test/X_test.txt': Test set.<br>
+>'test/y_test.txt': Test [class] labels.<br>
+>'activity_labels.txt': Links the class labels with their activity name.<br>
+>'train/subject_train.txt': Identifies the subject who performed the activity. Its range is from 1 to 30. [Also 'test/subject_test.txt']<br>
+>'features.txt': List of all features [variables calculated from raw measurements].<br>
 
 ##Description of script
-#Preliminary steps
+####Preliminary steps
 
 1. From user's working directory, checks for project directory and data.
 2. Creates project directory and downloads/unzips data if necessary.
 3. Changes working directory to project directory for the remainder of script.
 
-#Data cleaning and transformations applied
+####Data cleaning and transformations applied
 
 1. Merges "training" and "test" data sets into a single large dataframe.
 2. Extracts a new dataframe containing only the -std() and -mean() variables from the results of Step 1 using indices from the "features" data set.
@@ -34,12 +34,12 @@ The original data set consists of:
 
 1. "subject" -- number assigned to study participent; 1:30             
 2. "activity" -- descriptor for activity measured           
-  1. "walking"
-  2. "walkingUpstairs"
-  3. "walkingDownstairs"
-  4. "sitting"
-  5. "standing"
-  6. "laying"
+  - "walking"
+  - "walkingUpstairs"
+  - "walkingDownstairs"
+  - "sitting"
+  - "standing"
+  - "laying"
 3. "tBodyAccMeanX"        
 4. "tBodyAccMeanY"       
 5. "tBodyAccMeanZ"        
@@ -107,8 +107,8 @@ The original data set consists of:
 67. "fBodyGyroJerkMagMean" 
 68. "fBodyGyroJerkMagStd"
 
-#Notes:
+####Notes:
 
-t- indicates a time measurement
-f- indicates a frequency measurement
--X,-Y, and -Z indicate the tri-axial direction of the measurement
+t- indicates a time measurement<br>
+f- indicates a frequency measurement<br>
+-X,-Y, and -Z indicate the tri-axial direction of the measurement<br>
