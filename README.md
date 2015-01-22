@@ -2,7 +2,7 @@
 
 This repository and script fulfill the course project requirement of the Johns Hopkins "Getting and Cleaning Data" course on Coursera.
 
-#Project requirements:
+####Project requirements:
 1. a script called run_analysis.R that
   * Merges the training and the test sets to create one data set.
   * Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -12,7 +12,7 @@ This repository and script fulfill the course project requirement of the Johns H
 2. a code book called CodeBook.md that describes the data, variables, and any transformations or work performed to clean them up.
 3. a README.md file that explains how the files work and how they are connected.
 
-#Repo contents:
+####Repo contents:
 1. run_analysis.R -- downloads (if necessary) and processes data from the Human Activity Recognition Using Smartphones Dataset, Version 1.0 [1].
 2. CodeBook.md -- describes data, variables, and the steps in run_analysis.R
 3. README.md -- describes the overall project, gives instructions for running the script, discusses the programming choices I made, provides references.
@@ -21,15 +21,18 @@ This repository and script fulfill the course project requirement of the Johns H
 
 IMPORTANT: The script assumes that the user may not already have the necessary data or a dedicated folder for the project. Set your working directory to the folder where you want the project folder to be created, and the script will create, download, and unzip the necessary files. To run the script:
 
->source("run_analysis.R")
+```
+source("run_analysis.R")
+```
 
 If you have already downloaded and unzipped the data: Set your working directory to the "UCI HAR Dataset" folder and use a program like RStudio to run the script from line 17.
 
 The "cleanAverages.txt" file will be created in the "UCI HAR Dataset" directory. To access it:
 
->cleanAverages <- read.table("cleanAverages.txt", header=TRUE)
->view(cleanAverages)
-
+```
+cleanAverages <- read.table("cleanAverages.txt", header=TRUE)
+view(cleanAverages)
+```
 ##Discussion of programming:
 
 1. "Wide" vs "narrow" data. Since the assignment said that both the wide and narrow forms of data were acceptable, I chose narrow because it seemed the most natural in context.
